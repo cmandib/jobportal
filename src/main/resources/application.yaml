@@ -1,3 +1,9 @@
 spring:
   application:
     name: jobportal
+  modulith:
+    events:
+      jdbc-schema-initialization:
+        enabled: true
+server:
+  port: 8081
