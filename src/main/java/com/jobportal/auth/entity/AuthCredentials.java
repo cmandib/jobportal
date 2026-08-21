@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name = "auth_credentials")
@@ -21,7 +22,7 @@ public class AuthCredentials {
     private Long id;
 
     @Column(name = "user_id", nullable = false, unique = true)
-    private Long userId;
+    private UUID userId;
 
     @Column(nullable = false, unique = true)
     private String email;

@@ -31,12 +31,19 @@ dependencies {
 	implementation("org.springframework.modulith:spring-modulith-observability-api")
 	implementation("org.springframework.modulith:spring-modulith-starter-core")
 	implementation("org.springframework.modulith:spring-modulith-starter-jdbc")
+	implementation("org.springframework.boot:spring-boot-starter-security")
+	implementation("io.jsonwebtoken:jjwt-api:0.13.0")
+
 	compileOnly("org.projectlombok:lombok")
 	developmentOnly("org.springframework.boot:spring-boot-docker-compose")
+
 	runtimeOnly("org.postgresql:postgresql")
 	runtimeOnly("org.springframework.modulith:spring-modulith-actuator")
 	runtimeOnly("org.springframework.modulith:spring-modulith-observability-core")
 	runtimeOnly("org.springframework.modulith:spring-modulith-runtime")
+	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.13.0")
+	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.13.0")
+
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-actuator-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-data-jpa-test")
