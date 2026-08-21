@@ -73,3 +73,20 @@ integration-level checks — no mocked database.
 
 🚧 Early scaffolding stage — modules are being built out incrementally, one at a time,
 each in its own PR with the corresponding Flyway migrations and tests.
+
+## Environment setup
+
+Copy `.env.example` to `.env` and fill in real values (the placeholder JWT secret
+is fine for local dev, just needs to be present):
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Load environment variables into your shell session before running the app:
+
+```powershell
+.\load-env.ps1
+```
+
+Run this once per new terminal session before `bootRun`.
